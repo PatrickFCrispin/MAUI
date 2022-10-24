@@ -1,4 +1,0 @@
-Sobre
-
-App desenvolvido em .NET MAU com DataBinding e design MVVM.
-Link para o App -> https://drive.google.com/file/d/11raxXbn6HwkgQjIWpB6bgfqIpM5RrUxh/view?usp=sharing
