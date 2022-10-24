@@ -2,7 +2,7 @@
 CRUD básico desenvolvido em .NET MAUI.
 
 ## Description
-O projeto contém um CRUD desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse: 
+O projeto contém um CRUD desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse o link: 
 - https://drive.google.com/file/d/11raxXbn6HwkgQjIWpB6bgfqIpM5RrUxh/view?usp=sharing
 
 ## Installation
