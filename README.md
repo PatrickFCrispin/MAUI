@@ -1,5 +1,5 @@
 # MAUI Project
-CRUD básico de anotações desenvolvido em .NET MAUI.
+CRUD de anotações desenvolvido em .NET MAUI.
 
 ## Description
 O projeto contém um CRUD de anotações desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse o link: 
