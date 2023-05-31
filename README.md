@@ -3,7 +3,7 @@ CRUD de anotações desenvolvido em .NET MAUI.
 
 ## Description
 O projeto contém um CRUD de anotações desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse o link: 
-- https://drive.google.com/file/d/1az8hHuRih2KdB7E1GxF0kcaAcsTq3zNl/view?usp=sharing
+- https://drive.google.com/file/d/1az8hHuRih2KdB7E1GxF0kcaAcsTq3zNl/view?usp=sharing.
 
 ## Installation
 - Baixar e instalar o Visual Studio (caso não tenha);
@@ -13,5 +13,6 @@ O projeto contém um CRUD de anotações desenvolvido em .NET MAUI com DataBindi
 
 ## Usage
 - Compilar o projeto no Visual Studio;
+    - Clean e Rebuild.
 - Abrir o Emulador ou conectar um device físico e parea-lo com o Visual Studio;
 - Rodar o projeto.
