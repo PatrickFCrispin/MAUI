@@ -1,9 +1,8 @@
 # MAUI Project
-Este repositório contém uma App de anotações desenvolvido em .NET MAUI. É um CRUD onde é possível listar as anotações, criar, editar e remover anotações.
+App desenvolvido em .NET MAUI com MVVM e Data Binding. Foi o primeiro App desenvolvido com a nova técnologia .NET.
 
 ## Description
-O projeto contém um CRUD de anotações desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse o link: 
-- https://drive.google.com/file/d/1kCZF4bV1Oa3_pUiKW8DXufwEiMkRkA_P/view?usp=sharing
+Trata-se de um CRUD onde é possível listar anotações/notas, criar, editar e remover anotações.
 
 ## Installation
 - Baixar e instalar o Visual Studio (caso não tenha).
