@@ -1,5 +1,5 @@
 # MAUI Project
-App desenvolvido em .NET MAUI com MVVM e Data Binding. Foi o primeiro App desenvolvido com a nova técnologia .NET.
+App desenvolvido em .NET MAUI com MVVM e data binding. Foi o primeiro App desenvolvido com a nova técnologia .NET.
 
 ## Description
 Trata-se de um CRUD onde é possível listar anotações/notas, criar, editar e remover anotações.
