@@ -1,9 +1,9 @@
 # MAUI Project
-CRUD de anotações desenvolvido em .NET MAUI.
+Este repositório contém uma App de anotações desenvolvido em .NET MAUI. É um CRUD onde é possível listar as anotações, criar, editar e remover anotações.
 
 ## Description
 O projeto contém um CRUD de anotações desenvolvido em .NET MAUI com DataBinding e design MVVM. Para baixa-lo, acesse o link: 
-- https://drive.google.com/file/d/1az8hHuRih2KdB7E1GxF0kcaAcsTq3zNl/view?usp=sharing.
+- https://drive.google.com/file/d/1kCZF4bV1Oa3_pUiKW8DXufwEiMkRkA_P/view?usp=sharing
 
 ## Installation
 - Baixar e instalar o Visual Studio (caso não tenha).
