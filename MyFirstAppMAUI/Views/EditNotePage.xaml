@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:MyFirstAppMAUI.ViewModels"
+             x:Class="MyFirstAppMAUI.Views.EditNotePage"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <viewModel:EditNoteViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="10" Margin="10">
+            <Editor AutoSize="TextChanges" 
+                    BackgroundColor="LightBlue" 
+                    FontSize="16" 
+                    FlowDirection="LeftToRight" 
+                    HeightRequest="150" 
+                    Placeholder="Nota..." 
+                    PlaceholderColor="Gray" 
+                    Text="{Binding Description}" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+                <Button BackgroundColor="Red" 
+                        FontSize="16" 
+                        Text="Remover" 
+                        Command="{Binding RemoveCommand}" />
+
+                <Button Grid.Column="1" 
+                        FontSize="16" 
+                        Text="Salvar" 
+                        Command="{Binding SaveCommand}" />
+            </Grid>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

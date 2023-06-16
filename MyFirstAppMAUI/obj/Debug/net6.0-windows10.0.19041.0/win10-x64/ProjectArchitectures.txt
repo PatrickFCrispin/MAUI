@@ -1,0 +1,1 @@
+C:\Users\Patri\MyFirstAppMAUI\MyFirstAppMAUI\MyFirstAppMAUI.csproj;x64

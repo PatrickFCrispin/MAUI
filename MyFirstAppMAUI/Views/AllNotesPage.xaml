@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:MyFirstAppMAUI.Converters"
+             xmlns:viewModel="clr-namespace:MyFirstAppMAUI.ViewModels"
+             x:Class="MyFirstAppMAUI.Views.AllNotesPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InverseBoolConverter x:Key="InverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewModel:AllNotesViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}"  IconImageSource="{FontImage Glyph='+', Color=White, Size=32}" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout>
+                <VerticalStackLayout IsVisible="{Binding IsListEmpty}" Margin="20">
+                    <Label Text="{Binding ListEmptyMessage}" 
+                           FontSize="16" 
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}" Margin="20">
+                    <CollectionView ItemsSource="{Binding Items}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout VerticalOptions="FillAndExpand">
+                                    <Label Text="{Binding Description}" FontSize="20" />
+                                    <Label Text="{Binding CreatedAt}" FontSize="16" TextColor="Gray" />
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" 
+                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:AllNotesViewModel}}, Path=ItemTappedCommand}" 
+                                                              CommandParameter="{Binding .}" />
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

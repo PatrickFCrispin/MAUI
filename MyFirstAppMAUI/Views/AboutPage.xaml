@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:MyFirstAppMAUI.ViewModels"
+             x:Class="MyFirstAppMAUI.Views.AboutPage"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <viewModel:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="10" Margin="10">
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="{Binding Image.Source}" 
+                       SemanticProperties.Description="Ícone do dot net bot!" 
+                       HeightRequest="128" />
+                <Label FontSize="16" FontAttributes="Bold" Text="{Binding AppName}" VerticalOptions="End" />
+                <Label FontSize="16" Text="{Binding AppVersion}" VerticalOptions="End" />
+            </HorizontalStackLayout>
+
+            <Label FontSize="16" Text="{Binding Info}" />
+            <Button FontSize="16" Text="Saiba mais..." Clicked="MoreInfo_ClickedAsync" />
+        </VerticalStackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
