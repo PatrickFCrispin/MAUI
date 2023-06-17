@@ -19,7 +19,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}"  IconImageSource="{FontImage Glyph='+', Color=White, Size=32}" />
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
         <ScrollView>
             <VerticalStackLayout>
@@ -53,5 +53,5 @@
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
-    
+
 </ContentPage>

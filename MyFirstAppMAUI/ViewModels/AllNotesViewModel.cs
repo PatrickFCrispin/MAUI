@@ -74,7 +74,7 @@ namespace MyFirstAppMAUI.ViewModels
 
         private static class Messages
         {
-            public const string NoItemsToShow = "Não existem notas cadastradas.";
+            public const string NoItemsToShow = "Nenhuma nota cadastrada.";
         }
     }
 }
