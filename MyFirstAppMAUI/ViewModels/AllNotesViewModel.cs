@@ -38,8 +38,8 @@ namespace MyFirstAppMAUI.ViewModels
         {
             try
             {
-                var items = Directory.EnumerateFiles(FileSystem.AppDataDirectory, "*.notes.txt")
-                    .Select(note => new Note()
+                var notes = Directory.EnumerateFiles(FileSystem.AppDataDirectory, "*.notes.txt")
+                    .Select(note => new Note
                     {
                         Filename = note,
                         Description = File.ReadAllText(note),
@@ -47,28 +47,28 @@ namespace MyFirstAppMAUI.ViewModels
                     })
                     .OrderBy(note => note.CreatedAt);
 
-                if (!items.Any())
+                if (!notes.Any())
                 {
                     IsListEmpty = true;
                     ListEmptyMessage = Messages.NoItemsToShow;
                     return;
                 }
 
-                HandleSuccessfulLoadingOf(items);
+                HandleSuccessfulLoadingOf(notes);
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("ERRO", $"{ex.Message}", "OK");
+                await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
 
-        private void HandleSuccessfulLoadingOf(IOrderedEnumerable<Note> items)
+        private void HandleSuccessfulLoadingOf(IOrderedEnumerable<Note> notes)
         {
             IsListEmpty = false;
             Items.Clear();
-            foreach (var item in items)
+            foreach (var note in notes)
             {
-                Items.Add(item);
+                Items.Add(note);
             }
         }
 

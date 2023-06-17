@@ -11,9 +11,8 @@ namespace MyFirstAppMAUI.ViewModels
             Title = "Nova nota";
             CancelCommand = new Command(async () => await GoToRouteAsync($"//{nameof(AllNotesPage)}"));
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
-
             // Invokes a delegate
-            PropertyChanged += (_, _) => SaveCommand.ChangeCanExecute();
+            PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
         }
 
         private async Task OnSaveAsync()
@@ -23,12 +22,13 @@ namespace MyFirstAppMAUI.ViewModels
             try
             {
                 File.WriteAllText(filePath, Description);
-                await Shell.Current.DisplayAlert("SUCESSO", $"{Messages.AddedSuccessfully}", "OK");
+
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.AddedSuccessfully, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("ERRO", $"{ex.Message}", "OK");
+                await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
 

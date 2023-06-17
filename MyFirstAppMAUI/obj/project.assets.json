@@ -24573,11 +24573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Patri\\MyFirstAppMAUI\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
+      "projectUniqueName": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\MAUI\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
       "projectName": "MyFirstAppMAUI",
-      "projectPath": "C:\\Users\\Patri\\MyFirstAppMAUI\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
+      "projectPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\MAUI\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
       "packagesPath": "C:\\Users\\Patri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Patri\\MyFirstAppMAUI\\MyFirstAppMAUI\\obj\\",
+      "outputPath": "C:\\Users\\Patri\\OneDrive\\Área de Trabalho\\MAUI\\MyFirstAppMAUI\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

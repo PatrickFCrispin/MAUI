@@ -14,15 +14,14 @@ namespace MyFirstAppMAUI.ViewModels
             LoadItemsCommand = new Command(async () => await GetItemAsync(FileName));
             RemoveCommand = new Command(async () => await OnRemoveAsync());
             SaveCommand = new Command(async () => await OnSaveAsync(), ValidateSave);
-
-            PropertyChanged += (_, _) => SaveCommand.ChangeCanExecute();
+            PropertyChanged += (_, __) => SaveCommand.ChangeCanExecute();
         }
 
         private async Task GetItemAsync(string fileName)
         {
             try
             {
-                var item = Directory.EnumerateFiles(FileSystem.AppDataDirectory, "*.notes.txt")
+                var note = Directory.EnumerateFiles(FileSystem.AppDataDirectory, "*.notes.txt")
                     .Select(note => new Note()
                     {
                         Filename = note,
@@ -31,18 +30,18 @@ namespace MyFirstAppMAUI.ViewModels
                     })
                     .FirstOrDefault(note => note.Filename == fileName);
 
-                if (item is null)
+                if (note is null)
                 {
-                    await Shell.Current.DisplayAlert("ERRO", $"{Messages.ItemNotFound}", "OK");
+                    await Shell.Current.DisplayAlert("ERRO", Messages.ItemNotFound, "OK");
                     await GoToRouteAsync($"//{nameof(AllNotesPage)}");
                     return;
                 }
 
-                Description = item.Description;
+                Description = note.Description;
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("ERRO", $"{ex.Message}", "OK");
+                await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
 
@@ -52,12 +51,13 @@ namespace MyFirstAppMAUI.ViewModels
             try
             {
                 File.Delete(filePath);
-                await Shell.Current.DisplayAlert("SUCESSO", $"{Messages.RemovedSuccessfully}", "OK");
+
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.RemovedSuccessfully, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("ERRO", $"{ex.Message}", "OK");
+                await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
 
@@ -67,14 +67,16 @@ namespace MyFirstAppMAUI.ViewModels
             try
             {
                 var createdAt = File.GetCreationTime(filePath);
+
                 File.WriteAllText(filePath, Description);
                 File.SetCreationTime(filePath, createdAt);
-                await Shell.Current.DisplayAlert("SUCESSO", $"{Messages.UpdatedSuccessfully}", "OK");
+
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.UpdatedSuccessfully, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("ERRO", $"{ex.Message}", "OK");
+                await Shell.Current.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
 
