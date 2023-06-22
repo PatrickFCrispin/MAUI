@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0K6+KsHFCXsLgO9iwWRUjibuPv/JigHBMte0iephLXZUyEJuTa62d+HODzV1syuUHHYl6GhC4ctBj1UsIO2H/A==",
+  "dgSpecHash": "1KWyHMCqk7sebWgxVYd/vsJCJBNpf8qpvB5SbolfBLGKvSubMzJJpxVm0G0gQIq6+DDIuBJl5I+QAMf3ExQIow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patri\\teste\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
+  "projectFilePath": "C:\\teste\\MyFirstAppMAUI\\MyFirstAppMAUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patri\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\Patri\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",

@@ -10,28 +10,29 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <VerticalStackLayout Spacing="10" Margin="10">
+        <VerticalStackLayout Margin="10" Spacing="10">
             <Editor AutoSize="TextChanges" 
                     BackgroundColor="LightBlue" 
                     FontSize="16" 
                     FlowDirection="LeftToRight" 
                     HeightRequest="150" 
-                    Placeholder="Nota..." 
+                    Placeholder="Descrição..." 
                     PlaceholderColor="Gray" 
+                    Opacity="0.9" 
                     Text="{Binding Description}" />
 
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
                 <Button BackgroundColor="Red" 
-                        FontSize="16" 
+                        FontSize="14" 
                         Text="Remover" 
                         Command="{Binding RemoveCommand}" />
 
                 <Button Grid.Column="1" 
-                        FontSize="16" 
+                        FontSize="14" 
                         Text="Salvar" 
                         Command="{Binding SaveCommand}" />
             </Grid>
         </VerticalStackLayout>
     </ContentPage.Content>
-    
+
 </ContentPage>

@@ -17,7 +17,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}"  IconImageSource="{FontImage Glyph='+', Color=White, Size=32}" />
+        <ToolbarItem Text="Adicionar" Command="{Binding AddItemCommand}" IconImageSource="{FontImage Glyph='+', Color=White, Size=32}" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -38,8 +38,8 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout VerticalOptions="FillAndExpand">
-                                    <Label Text="{Binding Description}" FontSize="20" />
-                                    <Label Text="{Binding CreatedAt}" FontSize="16" TextColor="Gray" />
+                                    <Label Text="{Binding Description}" FontSize="16" />
+                                    <Label Text="{Binding CreatedAt}" FontSize="14" TextColor="Gray" />
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer NumberOfTapsRequired="1" 
                                                               Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:AllNotesViewModel}}, Path=ItemTappedCommand}" 
