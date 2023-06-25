@@ -23,7 +23,7 @@ namespace MyFirstAppMAUI.ViewModels
             {
                 File.WriteAllText(filePath, Description);
 
-                await Shell.Current.DisplayAlert("SUCESSO", Messages.AddedSuccessfully, "OK");
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyCreated, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
@@ -34,7 +34,7 @@ namespace MyFirstAppMAUI.ViewModels
 
         private static class Messages
         {
-            public const string AddedSuccessfully = "Nota criada com sucesso!";
+            public const string NoteSuccessfullyCreated = "Nota criada com sucesso!";
         }
     }
 }

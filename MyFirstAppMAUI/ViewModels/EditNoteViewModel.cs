@@ -32,7 +32,7 @@ namespace MyFirstAppMAUI.ViewModels
 
                 if (note is null)
                 {
-                    await Shell.Current.DisplayAlert("ERRO", Messages.ItemNotFound, "OK");
+                    await Shell.Current.DisplayAlert("ERRO", Messages.NoteNotFound, "OK");
                     await GoToRouteAsync($"//{nameof(AllNotesPage)}");
                     return;
                 }
@@ -50,9 +50,12 @@ namespace MyFirstAppMAUI.ViewModels
             var filePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
             try
             {
+                var accepted = await Shell.Current.DisplayAlert("INFO", Messages.AsksIfWantToRemoveNote, "OK", "Cancelar");
+                if (!accepted) { return; }
+
                 File.Delete(filePath);
 
-                await Shell.Current.DisplayAlert("SUCESSO", Messages.RemovedSuccessfully, "OK");
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyRemoved, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
@@ -71,7 +74,7 @@ namespace MyFirstAppMAUI.ViewModels
                 File.WriteAllText(filePath, Description);
                 File.SetCreationTime(filePath, createdAt);
 
-                await Shell.Current.DisplayAlert("SUCESSO", Messages.UpdatedSuccessfully, "OK");
+                await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyUpdated, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
             catch (Exception ex)
@@ -82,9 +85,10 @@ namespace MyFirstAppMAUI.ViewModels
 
         private static class Messages
         {
-            public const string ItemNotFound = "Ocorreu um erro ao recuperar a nota.";
-            public const string RemovedSuccessfully = "Nota removida com sucesso!";
-            public const string UpdatedSuccessfully = "Nota atualizada com sucesso!";
+            public const string NoteNotFound = "Nota não encontrada.";
+            public const string AsksIfWantToRemoveNote = "Tem certeza que deseja remover esta nota?";
+            public const string NoteSuccessfullyRemoved = "Nota removida com sucesso!";
+            public const string NoteSuccessfullyUpdated = "Nota atualizada com sucesso!";
         }
     }
 }
