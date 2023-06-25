@@ -1,1 +1,1 @@
-C:\teste\MyFirstAppMAUI\MyFirstAppMAUI.csproj;x64
+C:\MAUI\MyFirstAppMAUI\MyFirstAppMAUI.csproj;x64

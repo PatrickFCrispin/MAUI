@@ -8,51 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyFirstAppMAUI
-build_property.ProjectDir = C:\teste\MyFirstAppMAUI\
+build_property.ProjectDir = C:\MAUI\MyFirstAppMAUI\
 
-[C:/teste/MyFirstAppMAUI/App.xaml]
+[C:/MAUI/MyFirstAppMAUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/teste/MyFirstAppMAUI/AppShell.xaml]
+[C:/MAUI/MyFirstAppMAUI/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/teste/MyFirstAppMAUI/Resources/Styles/Colors.xaml]
+[C:/MAUI/MyFirstAppMAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/teste/MyFirstAppMAUI/Resources/Styles/Styles.xaml]
+[C:/MAUI/MyFirstAppMAUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/teste/MyFirstAppMAUI/Views/AboutPage.xaml]
+[C:/MAUI/MyFirstAppMAUI/Views/AboutPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Views.AboutPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AboutPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AboutPage.xaml
 
-[C:/teste/MyFirstAppMAUI/Views/AddNotePage.xaml]
+[C:/MAUI/MyFirstAppMAUI/Views/AddNotePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Views.AddNotePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AddNotePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AddNotePage.xaml
 
-[C:/teste/MyFirstAppMAUI/Views/AllNotesPage.xaml]
+[C:/MAUI/MyFirstAppMAUI/Views/AllNotesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Views.AllNotesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AllNotesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AllNotesPage.xaml
 
-[C:/teste/MyFirstAppMAUI/Views/EditNotePage.xaml]
+[C:/MAUI/MyFirstAppMAUI/Views/EditNotePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyFirstAppMAUI.Views.EditNotePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\EditNotePage.xaml

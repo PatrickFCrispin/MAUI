@@ -34,7 +34,7 @@ namespace MyFirstAppMAUI.ViewModels
 
         private static class Messages
         {
-            public const string AddedSuccessfully = "Nota criada e adicionada com sucesso!";
+            public const string AddedSuccessfully = "Nota criada com sucesso!";
         }
     }
 }

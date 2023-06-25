@@ -21,7 +21,7 @@ namespace MyFirstAppMAUI.ViewModels
             private set { SetProperty(ref _listEmptyMessage, value); }
         }
 
-        public ObservableCollection<Note> Items { get; private set; }
+        public ObservableCollection<Note> Items { get; }
         public Command AddItemCommand { get; }
         public Command<Note> ItemTappedCommand { get; }
 
