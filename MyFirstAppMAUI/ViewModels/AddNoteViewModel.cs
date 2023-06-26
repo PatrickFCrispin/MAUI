@@ -21,8 +21,9 @@ namespace MyFirstAppMAUI.ViewModels
             {
                 var randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
                 var filePath = Path.Combine(FileSystem.AppDataDirectory, randomFileName);
-                File.WriteAllText(filePath, Description);
 
+                File.WriteAllText(filePath, Description);
+                
                 await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyCreated, "OK");
                 await GoToRouteAsync($"//{nameof(AllNotesPage)}");
             }
