@@ -22,16 +22,16 @@ namespace MyFirstAppMAUI.ViewModels
         }
 
         public ObservableCollection<Note> Items { get; }
-        public Command AddItemCommand { get; }
         public Command<Note> ItemTappedCommand { get; }
+        public Command AddItemCommand { get; }
 
         public AllNotesViewModel()
         {
             Title = "Notas";
-            Items = new ObservableCollection<Note>();
             LoadItemsCommand = new Command(async () => await LoadNotesAsync());
-            AddItemCommand = new Command(async () => await GoToRouteAsync($"{nameof(AddNotePage)}"));
+            Items = new ObservableCollection<Note>();
             ItemTappedCommand = new Command<Note>(async (note) => await GoToRouteAsync($"{nameof(EditNotePage)}?{nameof(FileName)}={note.Filename}"));
+            AddItemCommand = new Command(async () => await GoToRouteAsync($"{nameof(AddNotePage)}"));
         }
 
         private async Task LoadNotesAsync()

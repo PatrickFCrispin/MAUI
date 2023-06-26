@@ -17,10 +17,10 @@ namespace MyFirstAppMAUI.ViewModels
 
         private async Task OnSaveAsync()
         {
-            var randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
-            var filePath = Path.Combine(FileSystem.AppDataDirectory, randomFileName);
             try
             {
+                var randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
+                var filePath = Path.Combine(FileSystem.AppDataDirectory, randomFileName);
                 File.WriteAllText(filePath, Description);
 
                 await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyCreated, "OK");

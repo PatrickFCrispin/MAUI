@@ -47,12 +47,12 @@ namespace MyFirstAppMAUI.ViewModels
 
         private async Task OnRemoveAsync()
         {
-            var filePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
             try
             {
                 var accepted = await Shell.Current.DisplayAlert("INFO", Messages.AsksIfWantToRemoveNote, "OK", "Cancelar");
                 if (!accepted) { return; }
 
+                var filePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
                 File.Delete(filePath);
 
                 await Shell.Current.DisplayAlert("SUCESSO", Messages.NoteSuccessfullyRemoved, "OK");
@@ -66,9 +66,9 @@ namespace MyFirstAppMAUI.ViewModels
 
         private async Task OnSaveAsync()
         {
-            var filePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
             try
             {
+                var filePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
                 var createdAt = File.GetCreationTime(filePath);
 
                 File.WriteAllText(filePath, Description);

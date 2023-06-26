@@ -22,14 +22,14 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout>
-                <VerticalStackLayout IsVisible="{Binding IsListEmpty}" Margin="20">
+            <VerticalStackLayout Margin="20">
+                <VerticalStackLayout IsVisible="{Binding IsListEmpty}">
                     <Label Text="{Binding ListEmptyMessage}" 
                            FontSize="16" 
                            HorizontalOptions="Center" />
                 </VerticalStackLayout>
 
-                <VerticalStackLayout IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}" Margin="20">
+                <VerticalStackLayout IsVisible="{Binding IsListEmpty, Converter={StaticResource InverseBoolConverter}}">
                     <CollectionView ItemsSource="{Binding Items}">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
